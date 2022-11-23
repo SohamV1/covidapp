@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 
 files:
-  source: /
-  destination: /home/ubuntu/server
+  - source: /
+    destination: /home/ubuntu/server
 
 permissions:
   - object: /
@@ -19,6 +19,6 @@ hooks:
       runas: root
   
   ApplicationStart:
-    - location: scripts/app_start.sh
+    - location: scripts/application_start.sh
       timeout: 300
       runas: root
